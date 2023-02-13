@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+}
+.btn-learnMore{
+    display: block;
+    margin: 50px auto 0;
+    max-width: 180px;
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #6e6e6e;
+    color: #FFFFFF;
+}
+.box-cardInfo > .cardInfo:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.cardInfo{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardInfo:first-child{
+    margin-top: 20px;
+}
+.cardInfo > img{
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+}
+.cardInfo p{
+    max-width: 500px;
+    width: 100%;
+}
+/* HEADER */
+.header__img-logo {
+    width: 100%;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 220px 0;
+}
+
+.header__list>li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    color: #6e6e6e;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header__list>li:hover .header__dropdown-content {
+    display: flex;
+}
+.header__list p{
+    margin-top: 15px;
+    height: 50px;
+}
+.header__dropdown-content {
+    display: none;
+    grid-gap: 16px;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    top: 55px;
+    width: 140px;
+    background-color: #6e6e6e;
+    text-align: center;
+    padding: 18px 20px;
+}
+
+.header__dropdown-content::after {
+    content: '';
+    position: absolute;
+    right: 60px;
+    top: -24px;
+    border: 12px solid transparent;
+    border-bottom: 12px solid #6e6e6e;
+}
+
+.header__dropdown-content>a {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+.header_btn{
+    display: flex;
+    align-items: center;
+    background-color: #2B6EA1;
+    color: #FFFFFF;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.header_btn > img{
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+}
+
+
+/* MAIN */
+.carousel__slide-img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+.section-carousel{
+    margin-top: 20px;
+}
+.carousel-item:after {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 70%); 
+}
+.carousel__box-text{
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    z-index: 2;
+}
+.carousel__box-text > p{
+    font-weight: 300 !important;
+}
+
+.section__shortInfo{
+    margin-top: 10%;
+    background-color: #383737;
+    padding: 100px 0;
+}
+.section__shortInfo-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__shortInfo-boxText{
+    color: #FFFFFF;
+}
+.section__shortInfo-boxText p{
+    margin: 30px 0;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+.section__shortInfo-boxText button{
+    max-width: 150px;
+    width: 100%;
+    height: 40px;
+    border-radius: 14px;
+}
+.section__ma{
+    margin-top: 10%;
+}
+.section__ma-box{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.section__ma-boxImg{
+    position: relative;
+    max-width: 520px;
+    width: 100%;
+    height: 350px;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+.section__ma-boxImg > img{
+    width:100%;
+    height: 120%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.section__ma-boxImg > img:hover{
+    transform: scale(1.1);
+}
+.section__ma-boxImg > h4{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #FFFFFF;
+    transform: translate(-50%, -50%)
+}
+
+.section__research{
+    margin-top: 10%;
+}
+.card-dropDownText{
+    margin-top: 30px;
+    border-top: 2px solid;
+    cursor: pointer;
+}
+.card-dropDownText > p{
+    margin-top: 20px;
+    padding: 0 20px;
+    display: none;
+}
+.card-dropDownText__boxTop{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-dropDownText__boxTop > h4{
+    max-width: 800px;
+    width: 100%;
+}
+.card-dropDownText__boxTop > img{
+    width: 25px;
+    height: 25px;
+}
+.dropDownOpen > p{
+    display: block !important;
+}
+.dropDownOpen img{
+    transform: rotate(180deg);
+}
+.section__projects{
+    margin-top: 10%;
+}
+.section__projects-boxCard{
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.section__projects-card{
+    max-width: 520px;
+    width: 100%;
+    background-color: #2B6EA1;
+    padding: 20px;
+    border-radius: 20px;
+}
+.section__projects-card > h4{
+    color: #FFFFFF;
+}
+.section__projects-card > p{
+    color: #383737;
+}
+.section__projects-card > img{
+    width: 100%;
+}
+.section__ioePeople{
+    margin-top: 10%;
+    text-align: center;
+}
+.section__ioePeople-boxCard{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__ioePeople-card{
+    max-width: 320px;
+    width: 100%;
+}
+.section__ioePeople-card > img{
+    margin-bottom: 20px;
+    max-width: 200px;
+    width: 100%;
+    height: 200px;
+    border-radius: 100%;
+}
+
+/* ABOUT US */
+.section__aboutUs{
+    margin-top: 5%;
+}
+.section__aboutUs-box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__aboutUs-box > p{
+    max-width: 500px;
+    width: 100%;
+}
+.section__whyChooseUs{
+    margin-top: 10%;
+}
+
+
+/* MA IN TEACHING */
+.section__maInTeachingInfo{
+    margin-top: 5%;
+}
+.section__maInTeachingAdmissions, .section__maInTeachingDiploma, .section__maInTeachingTuition, .section__maInTeachingFaq{
+    margin-top: 10%;
+}
+.section__maInTeachingDiploma{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__maInTeachingDiploma > img, .section__maInTeachingDiploma p{
+    max-width:  500px;
+    width: 100%;
+}
+
+/* FOOTER */
+.footer{
+    margin-top: 10%;
+    background-color: #b7b5b5;
+    height: 100%;
+    padding: 50px 0;
+}
+.footer__box{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__logo{
+    max-width: 400px;
+    width: 100%;
+}
+.footer__box-socialMedia{
+    margin-top: 10px;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+}
+.footer__socialMedia{
+    width: 30px;
+    height: 30px;
+}
+.footer__list >li{
+    margin-top: 10px;
+}
+.footer__list a{
+    color: #000;
+}
+.footer__list >li:first-child{
+    margin: 0;
+    color: #FFFFFF;
+    font-weight: 600;
+}
