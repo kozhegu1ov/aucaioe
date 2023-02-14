@@ -88,7 +88,7 @@ const arrProjects = [
         submit a lesson plan and its corresponding recording to a mentor, use the Abridged CLEAR rubric
         to reflect on their practice via Google Forms, and discuss each lesson in order to grow as
         professionals.`,
-    imgUrl: "/assets/images/projects.jpeg",
+    imgUrl: "./assets/images/projects.jpeg",
   },
   {
     title: "April-May, 2021",
@@ -98,7 +98,7 @@ const arrProjects = [
         Each mentoring cycle required viewing a lesson plan and video, providing feedback according to
         an abbreviated CLEAR rubric using Google Forms, as well as using reflection and Developmental
         hinking techniques in dialogue with the mentee..`,
-    imgUrl: "/assets/images/projects.jpeg",
+    imgUrl: "./assets/images/projects.jpeg",
   },
   {
     title: "Digital Pedagogy, October, 2020- July, 2021",
@@ -110,12 +110,12 @@ const arrProjects = [
     public schools of the country. Instruction included 8 hours of interactive seminars, 6 hours of
     guided practice with a peer mentor, 2 hours of orientation and reflection, and asynchronous
     learning activities.`,
-    imgUrl: "/assets/images/projects.jpeg",
+    imgUrl: "./assets/images/projects.jpeg",
   },
   {
     title: "MTP project",
     text: "8 weeks of training for ICT teachers with the Institute of Education at AUCA.",
-    imgUrl: "/assets/images/projects.jpeg",
+    imgUrl: "./assets/images/projects.jpeg",
   },
 ];
 
@@ -185,35 +185,35 @@ const arrTeachers = [
     description:
       "Christopher Baker holds an M.A. and Ph.D. in Central Eurasian studies from Indiana University, Bloomington. He did his major in Soviet Central Asia, focusing on late Soviet era literary art, with minor fields in Russian history and the history of ancient and medieval Central Asia. Dr. Baker also holds an MA in European History from the University of Toronto. Currently, he works at AUCA as the Director of the Master of Arts in Central Asian Studies (MACAS) and as an assistant professor in the General Education department. He teaches Teaching Seminar in Literature: Encounters at the Edges of Empire in the MAT program.",
     imgUrl:
-      "/assets/images/people_teacher.png",
+      "./assets/images/people_teacher.png",
   },
   {
     name: "Derek Lance Furr",
     description:
       "Derek Furr earned his Ph.D, M.A. and M.Ed from the University of Virginia, and his B.A. from Wake Forest University. Currently, he works at Bard College (New York, USA) as the Dean of Teacher Education and as an Associate Professor of Literature (http://www.bard.edu/faculty/details/?id=1307). He teaches Theories of Literature in the MAT program at AUCA.",
     imgUrl:
-    "/assets/images/people_teacher.png",
+    "./assets/images/people_teacher.png",
   },
   {
     name: "Elizabeth Davis",
     description:
       "Elizabeth Davis holds a Master’s degree in an Endorsement for Teaching Reading and Writing, All Grades, from Asbury College. A secondary English teacher since 2004, Elizabeth has taught at a public school in the United States as well as at two schools internationally – one in Guatemala and one in Kyrgyzstan. She has also served various roles in K-12 administration for the last seven years. In the MAT program, she teaches practical teaching courses such as Creating a Classroom Culture and Teaching Practicum, and she is working to develop teacher mentoring materials with the IOE",
     imgUrl:
-    "/assets/images/people_teacher.png",
+    "./assets/images/people_teacher.png",
   },
   {
     name: "James Plumtree",
     description:
       "James Plumtree earned his PhD and MA in Medieval Studies from Central European University, an MA in the same subject from the University of Bristol, and a BA in English Language and Literature from the University of Oxford. His publications predominantly focus on the Medieval West and on Manas. As a founding member of the Analysing Kyrgyz Narratives Research Group, he was part of a group that recorded and studied performances by contemporary manaschis. In the MAT program at AUCA he teaches the literature and social studies course Epic-Theory, Practice,History.",
     imgUrl:
-    "/assets/images/people_teacher.png",
+    "./assets/images/people_teacher.png",
   },
   {
     name: "Saule Hamzina",
     description:
       "Suale Hamzina holds a Master’s degree in Education Policy and Management from the Center of Educational Policy Study of Moscow High, School of Economic and Social Sciences. She studied her postgraduate education in psychology at the Bishkek Humanitarian University. She is a graduate of the Kazakh National State University from the Department of Psychology, specializing as a psychologist and teacher of psychology. She teaches Assessment of Learning in the MAT program at AUCA.",
     imgUrl:
-    "/assets/images/people_teacher.png",
+    "./assets/images/people_teacher.png",
   },
 ];
 
@@ -226,7 +226,7 @@ arrResearchText.map((item, index) => {
   return (divResearch.innerHTML += `<div class="card-dropDownText" id='section__research-card${index}' onClick='handleOpenDropDownText("section__research-card${index}")'>
     <div class="card-dropDownText__boxTop">
         <h4>${item.title}</h4>
-        <img src="/assets/images/arrow-down.png" alt="">
+        <img src="./assets/images/arrow-down.png" alt="">
     </div>
     <p>
     ${item.text}
@@ -237,7 +237,7 @@ arrResearchText.map((item, index) => {
   return (divLearningResearch.innerHTML += `<div class="card-dropDownText" id='section__learningResearch-card${index}' onClick='handleOpenDropDownText("section__learningResearch-card${index}")'>
     <div class="card-dropDownText__boxTop">
         <h4>${item.title}</h4>
-        <img src="/assets/images/arrow-down.png" alt="">
+        <img src="./assets/images/arrow-down.png" alt="">
     </div>
     <p>
     ${item.text}
@@ -249,7 +249,7 @@ arrFaq.map((item, index) => {
   return (divFaq.innerHTML += `<div class="card-dropDownText" id='section__maInTeachingFaq-card${index}' onClick='handleOpenDropDownText("section__maInTeachingFaq-card${index}")'>
     <div class="card-dropDownText__boxTop">
         <h4>${item.title}</h4>
-        <img src="/assets/images/arrow-down.png" alt="">
+        <img src="./assets/images/arrow-down.png" alt="">
     </div>
     <p>
     ${item.text}
