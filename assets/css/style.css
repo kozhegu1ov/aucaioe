@@ -50,6 +50,7 @@ button {
 .cardInfo > img{
     max-width: 500px;
     width: 100%;
+    height: 500px;
     border-radius: 20px;
 }
 .cardInfo p{
@@ -288,7 +289,7 @@ button {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 .section__ioePeople-card{
     max-width: 320px;
@@ -337,6 +338,36 @@ button {
     max-width:  500px;
     width: 100%;
 }
+
+
+/* PEOPLE */
+.section__peopleFaculty{
+    margin-top: 5%;
+}
+
+/* LEARNING */
+.section__learningCourse{
+    margin-top: 5%;
+}
+.section__learningCourse-table{
+    margin-top: 30px;
+}
+.section__learningCourse-table > thead{
+    background-color:#2B6EA1;
+}
+.section__learningCourse-table th{
+    padding: 20px;
+    border: 2px solid black;
+}
+.section__learningCourse-table td{
+    padding: 20px;
+    width: 25%;
+    border: 1px solid black;
+}
+.section__learningResearch, .section__learningProjects{
+    margin-top: 10%;
+}
+
 
 /* FOOTER */
 .footer{

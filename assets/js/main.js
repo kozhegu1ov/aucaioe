@@ -1,7 +1,17 @@
-const divResearch = document.getElementById("section__research-boxCard") ?? ""
-const divFaq = document.getElementById("section__maInTeachingFaq-boxCard")
-const divProjects = document.querySelector(".section__projects-boxCard") ?? ""
-const divWhyChooseUs = document.getElementById("section__whyChooseUs-boxCard") ?? ""
+const divResearch = document.getElementById("section__research-boxCard") ?? "";
+const divFaq =
+  document.getElementById("section__maInTeachingFaq-boxCard") ?? "";
+const divLearningResearch =
+  document.getElementById("section__learningResearch-boxCard") ?? "";
+const divLearningProjects =
+  document.getElementById("section__learningProjects-boxCard") ?? "";
+const divWhyChooseUs =
+  document.getElementById("section__whyChooseUs-boxCard") ?? "";
+const divProjects = document.querySelector(".section__projects-boxCard") ?? "";
+const divPeopleFaculty =
+  document.getElementById("section__peopleFaculty-boxCard") ?? "";
+const divIoePeople =
+  document.querySelector(".section__ioePeople-boxCard") ?? "";
 
 const arrResearchText = [
   {
@@ -145,29 +155,67 @@ const arrWhyChooseUs = [
 const arrFaq = [
   {
     title: "How do I apply?",
-    text: "Submit the completed application package by the deadline March 1. See the list of required documents here. Shortlisted candidates will be invited for an interview."
+    text: "Submit the completed application package by the deadline March 1. See the list of required documents here. Shortlisted candidates will be invited for an interview.",
   },
   {
     title: "When do I apply?",
-    text: "Applications are accepted from November to March of each year. Academic year begins in June."
+    text: "Applications are accepted from November to March of each year. Academic year begins in June.",
   },
   {
     title: "What is a certificate of equivalency?",
-    text: "A document issued by the Kyrgyz  Ministry of Education confirming that your degree is equivalent to the Kyrgyz BA degree and that you can apply for a master's. If you graduated outside of Kyrgyzstan, Kazakhstan, Tajikistan, Russia and Belarus, you need to obtain this certificate."
+    text: "A document issued by the Kyrgyz  Ministry of Education confirming that your degree is equivalent to the Kyrgyz BA degree and that you can apply for a master's. If you graduated outside of Kyrgyzstan, Kazakhstan, Tajikistan, Russia and Belarus, you need to obtain this certificate.",
   },
   {
     title: "Do I need to submit any test (TOEFL/IELTS) results?",
-    text: "Do I need to submit any test (TOEFL/IELTS) results? It is not required to submit, however, if you have one available please feel free to attached it to your application."
+    text: "Do I need to submit any test (TOEFL/IELTS) results? It is not required to submit, however, if you have one available please feel free to attached it to your application.",
   },
   {
     title: "What type of scholarship is available?",
-    text: "IOE is pleased to announce 100% tuition scholarships for public school teachers in partnership with the US Embassy in Bishkek.  IOE also offers IOE Fellowships, which offer qualifying teacher candidates from any school the possibility of a 10-25% tuition scholarship."
+    text: "IOE is pleased to announce 100% tuition scholarships for public school teachers in partnership with the US Embassy in Bishkek.  IOE also offers IOE Fellowships, which offer qualifying teacher candidates from any school the possibility of a 10-25% tuition scholarship.",
   },
   {
     title: "Can I study fully online?",
-    text: "No, you are required to come to campus for the summer semester and for 2-3 days for the on site component for fall and spring semesters."
+    text: "No, you are required to come to campus for the summer semester and for 2-3 days for the on site component for fall and spring semesters.",
   },
-]
+];
+
+const arrTeachers = [
+  {
+    name: "Christopher Baker",
+    description:
+      "Christopher Baker holds an M.A. and Ph.D. in Central Eurasian studies from Indiana University, Bloomington. He did his major in Soviet Central Asia, focusing on late Soviet era literary art, with minor fields in Russian history and the history of ancient and medieval Central Asia. Dr. Baker also holds an MA in European History from the University of Toronto. Currently, he works at AUCA as the Director of the Master of Arts in Central Asian Studies (MACAS) and as an assistant professor in the General Education department. He teaches Teaching Seminar in Literature: Encounters at the Edges of Empire in the MAT program.",
+    imgUrl:
+      "/assets/images/people_teacher.png",
+  },
+  {
+    name: "Derek Lance Furr",
+    description:
+      "Derek Furr earned his Ph.D, M.A. and M.Ed from the University of Virginia, and his B.A. from Wake Forest University. Currently, he works at Bard College (New York, USA) as the Dean of Teacher Education and as an Associate Professor of Literature (http://www.bard.edu/faculty/details/?id=1307). He teaches Theories of Literature in the MAT program at AUCA.",
+    imgUrl:
+    "/assets/images/people_teacher.png",
+  },
+  {
+    name: "Elizabeth Davis",
+    description:
+      "Elizabeth Davis holds a Master’s degree in an Endorsement for Teaching Reading and Writing, All Grades, from Asbury College. A secondary English teacher since 2004, Elizabeth has taught at a public school in the United States as well as at two schools internationally – one in Guatemala and one in Kyrgyzstan. She has also served various roles in K-12 administration for the last seven years. In the MAT program, she teaches practical teaching courses such as Creating a Classroom Culture and Teaching Practicum, and she is working to develop teacher mentoring materials with the IOE",
+    imgUrl:
+    "/assets/images/people_teacher.png",
+  },
+  {
+    name: "James Plumtree",
+    description:
+      "James Plumtree earned his PhD and MA in Medieval Studies from Central European University, an MA in the same subject from the University of Bristol, and a BA in English Language and Literature from the University of Oxford. His publications predominantly focus on the Medieval West and on Manas. As a founding member of the Analysing Kyrgyz Narratives Research Group, he was part of a group that recorded and studied performances by contemporary manaschis. In the MAT program at AUCA he teaches the literature and social studies course Epic-Theory, Practice,History.",
+    imgUrl:
+    "/assets/images/people_teacher.png",
+  },
+  {
+    name: "Saule Hamzina",
+    description:
+      "Suale Hamzina holds a Master’s degree in Education Policy and Management from the Center of Educational Policy Study of Moscow High, School of Economic and Social Sciences. She studied her postgraduate education in psychology at the Bishkek Humanitarian University. She is a graduate of the Kazakh National State University from the Department of Psychology, specializing as a psychologist and teacher of psychology. She teaches Assessment of Learning in the MAT program at AUCA.",
+    imgUrl:
+    "/assets/images/people_teacher.png",
+  },
+];
 
 const handleOpenDropDownText = (name) => {
   const card = document.getElementById(name);
@@ -176,6 +224,17 @@ const handleOpenDropDownText = (name) => {
 
 arrResearchText.map((item, index) => {
   return (divResearch.innerHTML += `<div class="card-dropDownText" id='section__research-card${index}' onClick='handleOpenDropDownText("section__research-card${index}")'>
+    <div class="card-dropDownText__boxTop">
+        <h4>${item.title}</h4>
+        <img src="/assets/images/arrow-down.png" alt="">
+    </div>
+    <p>
+    ${item.text}
+    </p>
+</div>`);
+});
+arrResearchText.map((item, index) => {
+  return (divLearningResearch.innerHTML += `<div class="card-dropDownText" id='section__learningResearch-card${index}' onClick='handleOpenDropDownText("section__learningResearch-card${index}")'>
     <div class="card-dropDownText__boxTop">
         <h4>${item.title}</h4>
         <img src="/assets/images/arrow-down.png" alt="">
@@ -215,6 +274,38 @@ arrWhyChooseUs.map((item) => {
     <div>
       <h4>${item.title}</h4>
       <p>${item.text}</p>
+    </div>
+    <img src="${item.imgUrl}" alt="">
+  </div>
+  `);
+});
+
+arrProjects.map((item) => {
+  return (divLearningProjects.innerHTML += `
+  <div class="cardInfo">
+    <div>
+      <h4>${item.title}</h4>
+      <p>${item.text}</p>
+    </div>
+    <img src="${item.imgUrl}" alt="">
+  </div>
+  `);
+});
+
+arrTeachers.slice(0, 3).map((item) => {
+  return (divIoePeople.innerHTML += `<div class="section__ioePeople-card">
+  <img src="${item.imgUrl}" alt="">
+  <h4>${item.name}</h4>
+  <p>${item.description}</p>
+</div>`);
+});
+
+arrTeachers.map((item) => {
+  return (divPeopleFaculty.innerHTML += `
+  <div class="cardInfo">
+    <div>
+      <h4>${item.name}</h4>
+      <p>${item.description}</p>
     </div>
     <img src="${item.imgUrl}" alt="">
   </div>
