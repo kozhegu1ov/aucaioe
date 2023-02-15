@@ -13,6 +13,8 @@ const divPeopleFaculty =
 const divIoePeople =
   document.querySelector(".section__ioePeople-boxCard") ?? "";
 
+const ulMenu = document.querySelectorAll(".header__list-menu p")
+
 const arrResearchText = [
   {
     title:
@@ -311,3 +313,10 @@ arrTeachers.map((item) => {
   </div>
   `);
 });
+
+ulMenu.forEach((item) => {
+  item.addEventListener("click", () => {
+    console.log("hello");
+    item.nextElementSibling.classList.toggle("header__dropdownOpen-content")
+  })
+})

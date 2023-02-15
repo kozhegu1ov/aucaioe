@@ -8,8 +8,14 @@
 ul {
     list-style: none;
     margin-bottom: 0;
+    padding-left: 0;
 }
-
+p, h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+}
+p{
+    margin-top: 10px;
+}
 a {
     text-decoration: none;
 }
@@ -27,7 +33,7 @@ button {
 }
 .btn-learnMore{
     display: block;
-    margin: 50px auto 0;
+    margin: 5% auto 0;
     max-width: 180px;
     width: 100%;
     height: 50px;
@@ -59,13 +65,17 @@ button {
 }
 /* HEADER */
 .header__img-logo {
+    margin-top: 20px;
     width: 100%;
 }
 
 .header__list {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 15px 220px 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto 0;
 }
 
 .header__list>li {
@@ -132,7 +142,7 @@ button {
 
 /* MAIN */
 .carousel__slide-img{
-    height: 100vh;
+    height: 83vh;
     width: 100%;
     object-fit: cover;
 }
@@ -154,6 +164,7 @@ button {
     margin: 0 auto;
     color: #fff;
     z-index: 2;
+    margin-bottom: 20px;
 }
 .carousel__box-text > p{
     font-weight: 300 !important;
@@ -162,12 +173,14 @@ button {
 .section__shortInfo{
     margin-top: 10%;
     background-color: #383737;
-    padding: 100px 0;
+    padding: 7% 0;
 }
 .section__shortInfo-box{
     display: flex;
-    justify-content: space-between;
+    grid-gap: 50px;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 .section__shortInfo-boxText{
     color: #FFFFFF;
@@ -193,7 +206,10 @@ button {
 .section__ma-box{
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    grid-gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .section__ma-boxImg{
     position: relative;
@@ -262,8 +278,10 @@ button {
 .section__projects-boxCard{
     margin-top: 30px;
     display: flex;
+    grid-gap: 50px;
+    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
 }
 .section__projects-card{
     max-width: 520px;
@@ -288,8 +306,10 @@ button {
 .section__ioePeople-boxCard{
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    grid-gap: 50px;
+    flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
 }
 .section__ioePeople-card{
     max-width: 320px;
@@ -378,6 +398,7 @@ button {
 }
 .footer__box{
     display: flex;
+    grid-gap: 20px;
     justify-content: space-between;
 }
 .footer__logo{
@@ -404,4 +425,90 @@ button {
     margin: 0;
     color: #FFFFFF;
     font-weight: 600;
+}
+
+
+.header__hamburger-menu{
+    display: none !important;
+    flex-direction: row !important;
+    color: #2B6EA1 !important;
+} 
+.header__hamburger-menu img{
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.header__dropDown-menu{
+    margin-top: 20px;
+}
+.header__dropdownOpen-content{
+    display: flex !important;
+}
+
+@media(max-width: 1250px){
+    .container{
+        padding: 0 10%;
+    }
+}
+@media(max-width: 950px){
+    .footer__box{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media(max-width: 850px){
+    .header__list li{
+        display: none;
+    }
+    .header__list-menu li{
+        display: flex;
+    }
+    .header__list-menu{
+        flex-direction: column;
+    }
+    .header__dropdown-content{
+        display: none;
+        position: relative;
+        top: 0;
+    }
+    .header__list :nth-child(5){
+        display: block;
+    }
+    .header_btn{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .header__hamburger-menu{
+        display: flex !important;
+    }
+    .header__list>li:hover .header__dropdown-content {
+        display: none;
+    }
+    .carousel__box-text{
+        display: block !important;
+        width: 70%;
+    }
+    .card-dropDownText__boxTop > img{
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+    }
+    h4{
+        font-size: 17px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .section__shortInfo-boxText button, .btn-learnMore{
+        max-width: 120px;
+        width: 100%;
+        font-size: 12px;
+    }
+}
+@media(max-width: 500px){
+    .section__shortInfo-video{
+        height: 215px;
+    }
 }
