@@ -47,16 +47,18 @@ button {
 .cardInfo{
     margin-top: 100px;
     display: flex;
-    justify-content: space-between;
+    grid-gap: 50px;
+    flex-wrap: wrap;
     align-items: center;
 }
 .cardInfo:first-child{
     margin-top: 20px;
 }
 .cardInfo > img{
-    max-width: 500px;
+    max-width: 350px;
     width: 100%;
-    height: 500px;
+    height: 350px;
+    object-fit: cover;
     border-radius: 20px;
 }
 .cardInfo p{
@@ -326,14 +328,12 @@ button {
 /* ABOUT US */
 .section__aboutUs{
     margin-top: 5%;
-}
-.section__aboutUs-box{
-    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    grid-gap: 50px;
+    flex-wrap: wrap;
     align-items: center;
 }
-.section__aboutUs-box > p{
+.section__aboutUs p{
     max-width: 500px;
     width: 100%;
 }
@@ -351,12 +351,14 @@ button {
 }
 .section__maInTeachingDiploma{
     display: flex;
-    justify-content: space-between;
+    grid-gap: 50px;
+    flex-wrap: wrap;
     align-items: center;
 }
 .section__maInTeachingDiploma > img, .section__maInTeachingDiploma p{
     max-width:  500px;
     width: 100%;
+    border-radius: 20px;
 }
 
 
@@ -457,6 +459,14 @@ button {
         justify-content: center;
         flex-direction: column;
     }
+    .section__learningCourse > div{
+        max-width: 900px;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .section__learningCourse-table{
+        width: 950px;
+    }
 }
 @media(max-width: 850px){
     .header__list li{
@@ -508,7 +518,7 @@ button {
     }
 }
 @media(max-width: 500px){
-    .section__shortInfo-video{
+    .youtube-video{
         height: 215px;
     }
 }
