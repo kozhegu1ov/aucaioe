@@ -65,6 +65,7 @@ button {
     max-width: 500px;
     width: 100%;
 }
+
 /* HEADER */
 .header__img-logo {
     margin-top: 20px;
@@ -95,7 +96,7 @@ button {
     display: flex;
 }
 .header__list p{
-    margin-top: 15px;
+    margin-top: 30px;
     height: 50px;
 }
 .header__dropdown-content {
@@ -105,7 +106,7 @@ button {
     flex-direction: column;
     position: absolute;
     z-index: 3;
-    top: 55px;
+    top: 70px;
     width: 140px;
     background-color: #6e6e6e;
     text-align: center;
@@ -127,8 +128,6 @@ button {
     font-weight: 500;
 }
 .header_btn{
-    display: flex;
-    align-items: center;
     background-color: #2B6EA1;
     color: #FFFFFF;
     padding: 12px;
@@ -288,7 +287,7 @@ button {
 .section__projects-card{
     max-width: 520px;
     width: 100%;
-    background-color: #2B6EA1;
+    background-color: #b7b5b5;
     padding: 20px;
     border-radius: 20px;
 }
@@ -296,9 +295,10 @@ button {
     color: #FFFFFF;
 }
 .section__projects-card > p{
-    color: #383737;
+    color: #000;
 }
 .section__projects-card > img{
+    margin-top: 20px;
     width: 100%;
 }
 .section__ioePeople{
@@ -318,6 +318,7 @@ button {
     width: 100%;
 }
 .section__ioePeople-card > img{
+    object-fit: cover;
     margin-bottom: 20px;
     max-width: 200px;
     width: 100%;
@@ -366,6 +367,34 @@ button {
 .section__peopleFaculty{
     margin-top: 5%;
 }
+.section__studentsMentors{
+    margin-top: 10%;
+    background-color: #383737;
+    padding: 7% 0;
+}
+.section__studentsMentors > div{
+    display: flex;
+    grid-gap: 70px;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.section__studentsMentors-card div{
+    display: flex;
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
+}
+.section__studentsMentors-card p{
+    margin-top: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+.section__studentsMentors-card img{
+    width: 50px;
+    height: 50px;
+}
 
 /* LEARNING */
 .section__learningCourse{
@@ -411,7 +440,6 @@ button {
     margin-top: 10px;
     display: flex;
     grid-gap: 10px;
-    justify-content: center;
 }
 .footer__socialMedia{
     width: 30px;
@@ -515,6 +543,14 @@ button {
         max-width: 120px;
         width: 100%;
         font-size: 12px;
+    }
+    .section__studentsMentors > div{
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+    .section__studentsMentors-card img{
+        width: 30px;
+        height: 30px;
     }
 }
 @media(max-width: 500px){

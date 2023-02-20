@@ -219,6 +219,7 @@ const arrTeachers = [
   },
 ];
 
+
 const handleOpenDropDownText = (name) => {
   const card = document.getElementById(name);
   card.classList.toggle("dropDownOpen");
